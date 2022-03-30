@@ -28,12 +28,14 @@ public class Program {
         }
         System.out.println();
         System.out.println("Account data:");
-        System.out.println(account);
+        //Using Getters
+        System.out.printf("Account %.0f, Holder: %s %s, Balance: $ %.2f%n", account.getNumber(), account.getName(), account.getLastName(), account.getBalance());
 
         System.out.println();
         System.out.print("Enter a deposit value: ");
         account.setDeposit(sc.nextDouble());
         System.out.println("Updated account data:");
+        //Printing from Method.
         System.out.println(account);
 
         System.out.println();

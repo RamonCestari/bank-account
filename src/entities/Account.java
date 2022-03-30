@@ -6,9 +6,6 @@ public class Account {
     private String name;
     private String lastName;
     private double balance;
-    private double initialDeposit;
-    private double deposit;
-    private double withdraw;
 
     public Account(int number) {
         this.number = number;
@@ -32,6 +29,10 @@ public class Account {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 
     public void setDeposit(double deposit) {
