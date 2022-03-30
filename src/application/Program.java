@@ -35,7 +35,7 @@ public class Program {
         System.out.print("Enter a deposit value: ");
         account.setDeposit(sc.nextDouble());
         System.out.println("Updated account data:");
-        //Printing from Method.
+        //Printing from the Class Method.
         System.out.println(account);
 
         System.out.println();
