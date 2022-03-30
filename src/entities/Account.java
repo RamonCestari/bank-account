@@ -6,23 +6,25 @@ public class Account {
     private String name;
     private double balance;
 
+    //CONSTRUCTOR FOR ACCOUNTS WITHOUT INITIAL DEPOSIT.
     public Account(int number, String name) {
         this.number = number;
         this.name = name;
     }
 
+    //CONSTRUCTOR FOR ACCOUNTS WITH INITIAL DEPOSIT.
     public Account(int number, String name, double initialDeposit) {
         this.number = number;
         this.name = name;
         setDeposit(initialDeposit);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getNumber() {
         return number;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -39,11 +41,6 @@ public class Account {
 
     public void setWithdraw(double withdraw) {
         this.balance -= withdraw + WITHDRAW_TAX;
-    }
-
-
-    public void setInitialDeposit(double initialDeposit) {
-        this.balance = initialDeposit;
     }
 
     @Override
