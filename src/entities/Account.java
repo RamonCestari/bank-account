@@ -1,7 +1,7 @@
 package entities;
 
 public class Account {
-    private static final int TAX = 5;
+    private static final int WITHDRAW_TAX = 5;
     private final int number;
     private String name;
     private String lastName;
@@ -40,7 +40,7 @@ public class Account {
     }
 
     public void setWithdraw(double withdraw) {
-        this.balance -= withdraw + TAX;
+        this.balance -= withdraw + WITHDRAW_TAX;
     }
 
 
