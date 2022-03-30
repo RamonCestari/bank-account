@@ -1,14 +1,20 @@
 package entities;
 
 public class Account {
-    private static final int WITHDRAW_TAX = 5;
+    private static final double WITHDRAW_TAX = 5.0;
     private final int number;
     private String name;
-    private String lastName;
     private double balance;
 
-    public Account(int number) {
+    public Account(int number, String name) {
         this.number = number;
+        this.name = name;
+    }
+
+    public Account(int number, String name, double initialDeposit) {
+        this.number = number;
+        this.name = name;
+        setDeposit(initialDeposit);
     }
 
     public void setName(String name) {
@@ -23,20 +29,12 @@ public class Account {
         return name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
     public double getBalance() {
         return balance;
     }
 
     public void setDeposit(double deposit) {
-        this.balance += deposit;
+        balance += deposit;
     }
 
     public void setWithdraw(double withdraw) {
@@ -53,7 +51,7 @@ public class Account {
         return "Account "
                 + number
                 + ", Holder: "
-                + name + " " + lastName
+                + name
                 + ", Balance: $ "
                 + String.format("%.2f", balance);
 
